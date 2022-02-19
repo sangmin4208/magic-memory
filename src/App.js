@@ -35,7 +35,14 @@ function App() {
 
   // handle choice
   const handleChoice = (card) => {
-    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+    if (choiceOne) {
+      if (card.id === choiceOne.id) {
+        return
+      }
+      setChoiceTwo(card)
+    } else {
+      setChoiceOne(card)
+    }
   }
 
   // compare 2 selected cards
@@ -58,7 +65,6 @@ function App() {
         }, 1000)
       }
     }
-    console.log(choiceOne, choiceTwo)
   }, [choiceOne, choiceTwo, disabled])
   // reset choices & increase turn
   const resetTurn = () => {
