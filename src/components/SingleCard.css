@@ -1,7 +1,7 @@
-.card {
+.card > div {
   position: relative;
+  perspective: 500px;
 }
-
 .card img {
   width: 100%;
   display: block;
@@ -9,23 +9,24 @@
   border-radius: 6px;
 }
 
+.card img {
+  transition: all ease 1s;
+  backface-visibility: hidden;
+}
 /* front of card - the picture */
 
 .card .front {
-  transform: rotateY(90deg);
+  transform: rotateY(-180deg);
   position: absolute;
-  transition: all ease-in 0.2s;
 }
 .flipped .front {
   transform: rotateY(0deg);
-  transition-delay: 0.2s;
 }
 
 /* back of card - cover */
 .card .back {
-  transition: all ease-in 0.2s 0.2s;
+  transform: rotateY(0deg);
 }
 .flipped .back {
-  transform: rotateY(90deg);
-  transition-delay: 0s;
+  transform: rotateY(180deg);
 }

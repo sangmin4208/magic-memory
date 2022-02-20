@@ -8,10 +8,10 @@ const cardImages = [
   { src: '/img/ring-1.png', matched: false },
   { src: '/img/scroll-1.png', matched: false },
   { src: '/img/shield-1.png', matched: false },
-  { src: '/img/sword-1.png', matched: false },
+  { src: '/img/sword-1.png', matched: false }
 ]
 
-function App() {
+export default function App() {
   const [cards, setCards] = useState([])
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
@@ -66,6 +66,7 @@ function App() {
       }
     }
   }, [choiceOne, choiceTwo, disabled])
+
   // reset choices & increase turn
   const resetTurn = () => {
     setChoiceOne(null)
@@ -97,5 +98,3 @@ function App() {
     </div>
   )
 }
-
-export default App
