@@ -2,12 +2,12 @@ import './App.css'
 import { useCallback, useEffect, useState } from 'react'
 import SingleCard from './components/SingleCard'
 const cardImages = [
-  { src: '/images/helmet-1.png' },
-  { src: '/images/potion-1.png' },
-  { src: '/images/ring-1.png' },
-  { src: '/images/scroll-1.png' },
-  { src: '/images/shield-1.png' },
-  { src: '/images/sword-1.png' }
+  { src: `${process.env.PUBLIC_URL}/images/helmet-1.png` },
+  { src: `${process.env.PUBLIC_URL}/images/potion-1.png` },
+  { src: `${process.env.PUBLIC_URL}/images/ring-1.png` },
+  { src: `${process.env.PUBLIC_URL}/images/scroll-1.png` },
+  { src: `${process.env.PUBLIC_URL}/images/shield-1.png` },
+  { src: `${process.env.PUBLIC_URL}/images/sword-1.png` }
 ]
 function App() {
   const [cards, setCards] = useState([])

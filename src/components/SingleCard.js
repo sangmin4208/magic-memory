@@ -13,7 +13,7 @@ function SingleCard({ card, handleChoice, flipped, disabled }) {
         <img
           onClick={handleClick}
           className="back"
-          src="/images/cover.png"
+          src={`${process.env.PUBLIC_URL}/images/cover.png`}
           alt="card back"
         />
       </div>
